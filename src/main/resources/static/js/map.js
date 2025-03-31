@@ -7,3 +7,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let map = new window.kakao.maps.Map(container, options); // 지도 생성 및 객체 리턴
 });
+
+// 2025-03-31 커밋 테스트
