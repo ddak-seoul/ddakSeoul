@@ -1,13 +1,73 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>지도화면</title>
+	<meta charset="UTF-8">
+	<title>딱서울|지도화면</title>
+	<link rel="stylesheet" href="css/css.css">
 </head>
 <body>
+	<div 
+
 	<h3>지도화면</h3>
 	<div id="map" style="width:500px;height:400px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f018e10059a4c1be80590743abc3370a"></script>
 	<script type="text/javascript" src="/js/map.js" ></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>딱서울|지도화면</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="icon" href="/images/favicon.ico">
+</head>
+<body>
+    <main class="container">
+        <aside class="list-area">
+            <nav class="list-nav">
+                <button class="logoBtn" id="logoBtn">
+                    <img src="/images/ddakseoul_logo.png" alt="로고" class="logoImg">
+                </button>
+                <button class="courseBtn" id="courseBtn">
+                    <img src="/images/course.png" alt="코스" class="courseImg">
+                    <p class="courseText">코스</p>
+                </button>
+                <button class="spotBtn" id="spotBtn">
+                    <img src="/images/spot.png" alt="장소" class="spotImg">
+                    <p class="spotText">장소</p>
+                </button>
+                <button class="starBtn" id="starBtn">
+                    <img src="/images/star.png" alt="저장" class="starImg">
+                    <p class="starText">저장</p>
+                </button>
+                <button class="mypageBtn" id="mypageBtn">
+                    <img src="/images/mypage.png" alt="마이페이지" class="mypageImg">
+                </button>
+            </nav>
+            <div class="list-content">
+                <div class="map-search-bar">
+                    <div class="map-search-box">
+                        <div class="map-input-box">
+                            <label for="map-input-search" class="map-label-search">검색어를 입력하세요</label>
+                            <input type="text" class="map-input-search" id="map-input-search" value="">
+                        </div>
+                        <button class="mapSearchBtn" id="mapSearchBtn">
+                            <img src="/images/search.png" alt="검색">
+                        </button>
+                    </div>
+                </div>
+                <div class="list-card">
+                    <!-- 리스트 내용이 들어갈 부분 -->
+                </div>
+            </div>
+        </aside>
+        <section class="map-area">
+            <div id="map" data-api-key-url="/api/kakao-map-key"></div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="js/map.js"></script>
 </body>
 </html>

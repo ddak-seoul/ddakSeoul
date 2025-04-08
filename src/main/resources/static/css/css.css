@@ -1,0 +1,328 @@
+/* -------------------- 공통 CSS -------------------- */
+
+/* 컬러코드 빨강 : #ea2425, 노랑 : #f9b912 */
+
+
+
+
+/* ------- 공통 스타일 ------- */
+
+/* 전체 레이아웃 */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: #000000;
+    padding: 0;
+    text-align: left;
+    display: flex; /* flexbox 적용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-between; /* 변경: 로고와 nav를 양 끝으로 */
+}
+.header .logo {
+    align-items: center;
+    margin: 5px 5px 5px 20px;
+}
+.header .logo img {
+    width: 45px;
+    height: 45px;
+}
+.header .nav {
+    display: flex; /* flexbox 적용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 100%; /* 추가: nav가 헤더의 전체 너비를 차지하도록 함 */
+    justify-content: space-between; /* 변경: 요소들을 양 끝으로 배치 */
+}
+.header .nav .nav-group {
+    margin-left: 0px; /* 그룹 간 간격 */
+}
+.header .nav .nav-group-search { /* 검색창을 중앙에 배치하기 위해 section에 추가 스타일 적용 */
+    /* flex-grow: 1; 추가: 남은 공간을 모두 차지하도록 함 */
+    max-width: 800px; /* 추가: 검색창 최대 너비 설정 (선택 사항) */
+    margin: 0 auto; /* 추가: 좌우 마진을 auto로 설정하여 중앙 정렬 */
+    display: flex; /* flexbox 레이아웃 적용 */
+    align-items: center;
+}
+.header .nav .nav-group-search input {
+    width: 300px;
+    max-width: 400px;
+    height: 32px;
+    margin-right: 6px; /* 검색창과 검색 버튼 간 간격 */
+    padding-left: 15px;
+    font-size: 14px;
+    border-radius: 7px;
+    border-style: none;
+}
+.header .nav .nav-group-search .mainSearchBtn {
+    height: 35px;
+    width: 35px;
+    margin-right: 7px; /* 검색 버튼과 지도 버튼 간 간격 */
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    position: relative; /* 이미지 절대 위치 설정을 위해 필요 */
+    background-color: #f9b912;
+    border-radius: 7px;
+    border-style: none;
+}
+.header .nav .nav-group-search .mainSearchBtn img {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+.header .nav .nav-group-search .mapBtn {
+    width: 35px;
+    height: 35px;
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    position: relative; /* 이미지 절대 위치 설정을 위해 필요 */
+    background-color: #ea2425;
+    border-radius: 7px;
+    border-style: none;
+}
+.header .nav .nav-group-search .mapBtn img {
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+}
+.header .nav .nav-group-user {
+    align-items: center;
+    justify-content: right;
+    margin: 5px 20px 5px 5px;
+}
+.header .nav .nav-group-user .mypage img {
+    width: 30px; /* 마이페이지 이미지 너비 조절 */
+    height: 30px; /* 마이페이지 이미지 높이 조절 */
+}
+
+/* 메인 컨텐츠 - 컨테이너 */
+.container {
+    display: flex;
+    flex: 1; /* 남은 공간을 container가 모두 차지하도록 설정 */
+}
+
+/* 푸터 */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    font-size: 12px;
+}
+.footer p {
+    margin: 8px;
+}
+
+
+
+/* ------- 개별 화면 스타일 ------- */
+
+/* --- 1. 메인화면 START --- */
+/* 메인 컨텐츠 - 스크롤 영역 설정 */
+.wrapper {
+    flex: 1; /* 남은 공간 모두 차지 */
+    overflow-y: auto; /* 세로 스크롤 활성화 */
+}
+.wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+.wrapper::-webkit-scrollbar-thumb {
+    background: #949494; /* 스크롤 막대 색상 */
+    border-radius: 5px;
+    width: 8px;
+    min-height: 20px;
+}
+.wrapper::-webkit-scrollbar-track {
+    background: #000000; /* 스크롤 트랙 색상 */
+}
+/* 메인화면 컨텐츠 */
+.container .index-content {
+    width: 100%;
+    height: 2000px;
+}
+/* --- 1. 메인화면 END --- */
+
+
+
+/* --- 2. 지도화면 START --- */
+.list-area {
+    width: 25%;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    display: flex;
+    height: 100%; /* list-area 높이를 container에 맞춤 */
+}
+/* 리스트 - 내비바 */
+.list-nav {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    box-sizing: border-box;
+}
+.list-nav button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; /* 외곽선 제거 */
+    outline-width: 0; /* 외곽선 너비 0으로 설정 */
+    outline-style: none; /* 외곽선 스타일 없음으로 설정 */
+    box-sizing: border-box;
+    box-shadow: none; /* 그림자 제거 */
+}
+.list-nav .logoBtn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.list-nav .logoImg {
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+.list-nav .courseBtn {
+    margin-top: 20px;
+}
+.list-nav .courseImg {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+.list-nav .courseBtn .courseText {
+    margin: 0;
+    color: #ffffff;
+    font-size: 13px;
+}
+.list-nav .spotBtn {
+    margin-top: 20px;
+}
+.list-nav .spotImg {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+.list-nav .spotBtn .spotText {
+    margin: 0;
+    color: #ffffff;
+    font-size: 13px;
+}
+.list-nav .starBtn {
+    margin-top: 20px;
+}
+.list-nav .starImg {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+.list-nav .starBtn .starText {
+    margin: 0;
+    color: #ffffff;
+    font-size: 13px;
+}
+.list-nav .mypageBtn {
+    margin-top: auto; /* 마진을 자동으로 설정하여 아래로 밀어냄 */
+    margin-bottom: 20px; /* 하단 여백 추가 */
+}
+.list-nav .mypageImg {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* 리스트 컨텐츠 영역 */
+.list-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 검색 바 */
+.map-search-bar {
+    margin: 0px;
+    padding: 15px 10px 15px 18px;
+    background-color: #f9b912;
+}
+.map-search-box {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+}
+.map-input-box {
+    flex: 1;
+    position: relative; /* label absolute positioning을 위해 필요 */
+}
+.map-label-search {
+    padding: 0px 3px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #808080; /* 흐린 글씨 색상 */
+    pointer-events: none; /* 클릭 방지 */
+}
+.map-input-search {
+    width: 100%;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+}
+.map-input-search:focus {
+    outline: none; /* 포커스 시 테두리 제거 */
+}
+.map-input-search:focus + .map-label-search {
+    color: #d3d3d3; /* 포커스 시 label 글자색을 연한 회색으로 변경 */
+}
+.mapSearchBtn {
+    width: 35px;
+    height: 35px;
+    margin-left: 3px;
+    display: flex; /* flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    position: relative; /* 이미지 절대 위치 설정을 위해 필요 */
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+}
+.mapSearchBtn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 리스트 영역 */
+.list-card {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* 지도 영역 */
+.map-area {
+    width: 75%;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- 2. 지도화면 END --- */
+
+
+

@@ -9,19 +9,58 @@
     <meta name="author" content="맛집 리뷰어">
     
 	<!-- 페이지 제목 설정 -->
-	<title>딱, 서울 | 서울 코스 추천</title>
+	<meta charset="UTF-8">
+    <title>딱서울|메인화면</title>
+    <link rel="stylesheet" href="css/css.css">
+	<link rel="icon" href="/images/favicon.ico">
 	
 	<!-- 외부 JS 파일은 defer 속성 사용시 <head>에 위치 가능 -->
 	<script src="/js/index.js" defer></script>
 </head>
 <body>
-	<h3>index</h3>
-	<p>  The time on the server is <span id="serverTime"></span>.</p>
+    <header class="header">
+        <div class="logo">
+            <a href="/" >
+                <img src="/images/ddakseoul_logo.png" alt="딱서울 로고">
+            </a>
+        </div>
+        <nav class="nav">
+            <section class="nav-group nav-group-search">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <button class="mainSearchBtn" id="mainSearchBtn">
+                    <img src="/images/search.png" alt="검색">
+                </button>
+				<button class="mapBtn" id="mapBtn">
+                    <img src="/images/map.png" alt="지도">
+                </button>
+            </section>
+            <aside class="nav-group nav-group-user">
+                <div class="mypage">
+                    <a href="/mypage">
+                        <img src="/images/mypage.png" alt="마이페이지">
+                    </a>
+                </div>
+            </aside>
+        </nav>
+    </header>
+
+	<div class="wrapper">
+		<main class="container">
+			<section class="index-content">
+				<h3>index</h3>
+				<p>  The time on the server is <span id="serverTime"></span>.</p>
+				<button type="button" id="mapBtn">지도화면</button>
+				<a href="http://localhost:8081/map">
+					<button>지도화면2</button>
+				</a>
+			</section>
+		</main>
 	
-	<button type="button" id="mapBtn">지도화면</button>
+		<footer class="footer">
+			<p>딱서울은 서울의 다양한 정보를 제공하는 서비스입니다.</p>
+			<p>© 2025 딱서울. All rights reserved.</p>
+		</footer>
+	</div>
 	
-	<a href="http://localhost:8081/map">
-		<button>지도화면2</button>
-	</a>
 </body>
 </html>
