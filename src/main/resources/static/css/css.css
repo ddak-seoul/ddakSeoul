@@ -28,9 +28,21 @@ body {
     align-items: center;
     margin: 5px 5px 5px 20px;
 }
+.header .logo button {
+    background: none; /* 기본 배경색 제거 */
+    color: inherit; /* 텍스트 색상 상속 */
+    border: none; /* 테두리 제거 */
+    padding: 0; /* 패딩 제거 */
+    font: inherit; /* 폰트 상속 */
+    cursor: pointer; /* 마우스 커서 변경 */
+    outline: none; /* 포커스 테두리 제거 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .header .logo img {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
 }
 .header .nav {
     display: flex; /* flexbox 적용 */
@@ -176,11 +188,11 @@ body {
     box-sizing: border-box;
     box-shadow: none; /* 그림자 제거 */
 }
-.list-nav .logoBtn {
+.list-nav .homeBtn {
     margin-top: 15px;
     margin-bottom: 15px;
 }
-.list-nav .logoImg {
+.list-nav .homeImg {
     width: 95%;
     margin: 0;
     padding: 0;

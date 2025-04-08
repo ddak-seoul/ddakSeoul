@@ -1,7 +1,14 @@
 document.addEventListener('DOMContentLoaded', async function() {
+    
+    // 로고 버튼 클릭 시 메인화면으로 이동
+    const homeBtn = document.querySelector('#homeBtn');
+    homeBtn.addEventListener('click', function() {
+        window.location.href = '/';
+    });
+
+    // 지도 띄우기
     const mapContainer = document.querySelector('#map');
     const apiKeyUrl = mapContainer.getAttribute('data-api-key-url');
-
     try {
         // 카카오맵 API키 가져오기
         const apiKey = await getKakaoMapApiKey(apiKeyUrl);

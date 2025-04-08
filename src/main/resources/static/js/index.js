@@ -17,10 +17,17 @@ function getServerTime() {
 		});
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
 	// 서버시간 출력
 	getServerTime();
 	
+	// 로고 버튼 클릭 시 메인화면으로 이동
+	const logoBtn = document.querySelector('#logoBtn');
+	logoBtn.addEventListener('click', function() {
+		window.location.href = '/'; // 메인 화면 URL (루트 URL)
+	});
+
 	// [지도화면] 버튼 클릭 이벤트
 	const mapBtn = document.querySelector('#mapBtn');
 	mapBtn.addEventListener('click', function() {
