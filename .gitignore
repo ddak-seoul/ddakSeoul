@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,git,java,gradle,maven,netbeans,visualstudiocode,eclipse,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,git,java,gradle,maven,netbeans,visualstudiocode,eclipse,intellij
 
+
+# 보안이 중요한 정보가 들어있는 파일 (예 : 카카오 API 키)
+application-dev.properties
+
 ### Eclipse ###
 .metadata
 bin/
